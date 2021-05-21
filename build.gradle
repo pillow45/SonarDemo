@@ -17,6 +17,20 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+plugins {
+  id "org.sonarqube" version "3.2.0"
+}
+
+sonarqube {
+  properties {
+    property "sonar.projectKey", "pillow45_SonarDemo"
+    property "sonar.organization", "sonar-demo-hy"
+    property "sonar.host.url", "https://sonarcloud.io"
+  }
+}
+
+
+
 test {
 	useJUnitPlatform()
 }
